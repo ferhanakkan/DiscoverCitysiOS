@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3628C99023C37009002C729C /* AreaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628C98F23C37009002C729C /* AreaDataModel.swift */; };
+		36331AFF23C5F68900AF89DC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36331AFE23C5F68900AF89DC /* WeatherManager.swift */; };
+		36331B0123C5F6AB00AF89DC /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36331B0023C5F6AB00AF89DC /* WeatherModel.swift */; };
+		36331B0323C5F6DA00AF89DC /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36331B0223C5F6DA00AF89DC /* WeatherData.swift */; };
+		36334CD623C273FC005FCACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334CD523C273FC005FCACF /* AppDelegate.swift */; };
+		36334CD823C273FC005FCACF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334CD723C273FC005FCACF /* SceneDelegate.swift */; };
+		36334CDD23C273FD005FCACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36334CDB23C273FD005FCACF /* Main.storyboard */; };
+		36334CDF23C273FE005FCACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36334CDE23C273FE005FCACF /* Assets.xcassets */; };
+		36334CE223C273FE005FCACF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36334CE023C273FE005FCACF /* LaunchScreen.storyboard */; };
+		36334CEE23C27576005FCACF /* CityController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334CED23C27576005FCACF /* CityController.xib */; };
+		36334CF023C27583005FCACF /* CityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334CEF23C27583005FCACF /* CityController.swift */; };
+		36334CF823C27E94005FCACF /* AreaController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334CF723C27E94005FCACF /* AreaController.xib */; };
+		36334CFA23C27EA1005FCACF /* AreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334CF923C27EA1005FCACF /* AreaController.swift */; };
+		36334CFC23C27ECF005FCACF /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334CFB23C27ECF005FCACF /* MapsController.swift */; };
+		36334CFE23C27EE3005FCACF /* MapsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334CFD23C27EE3005FCACF /* MapsController.xib */; };
+		36334D0023C27F08005FCACF /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334CFF23C27F08005FCACF /* HistoryController.swift */; };
+		36334D0223C27F16005FCACF /* HistoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334D0123C27F16005FCACF /* HistoryController.xib */; };
+		36334D0423C27F72005FCACF /* QuestionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334D0323C27F72005FCACF /* QuestionController.xib */; };
+		36334D0623C27F7E005FCACF /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334D0523C27F7E005FCACF /* QuestionController.swift */; };
+		36334D0823C27F9F005FCACF /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334D0723C27F9F005FCACF /* ScoreController.swift */; };
+		36334D0A23C27FAC005FCACF /* ScoreController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334D0923C27FAC005FCACF /* ScoreController.xib */; };
+		364827E623C4BC0F008E3589 /* MapDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364827E523C4BC0F008E3589 /* MapDrawer.swift */; };
+		364827E823C4F489008E3589 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364827E723C4F489008E3589 /* HistoryViewModel.swift */; };
+		364827EA23C4F692008E3589 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364827E923C4F692008E3589 /* QuestionViewModel.swift */; };
+		36602F4B23CB3CBC00741576 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36602F4A23CB3CBC00741576 /* GoogleService-Info.plist */; };
+		3678BAE523D3A26D00EB8540 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3678BAE423D3A26D00EB8540 /* Constants.swift */; };
+		368623E923D4FD6900725F7A /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368623E823D4FD6900725F7A /* MapsModel.swift */; };
+		36B1D30B23D6FB2400A185B9 /* FirestormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1D30A23D6FB2400A185B9 /* FirestormManager.swift */; };
+		36F87C0B23C4A22E0079073C /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F87C0A23C4A22E0079073C /* MapsViewModel.swift */; };
+		36F87C0E23C4A67C0079073C /* CreateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F87C0D23C4A67C0079073C /* CreateNavigationController.swift */; };
+		36FD409823C31F550022892C /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FD409723C31F550022892C /* CityViewModel.swift */; };
+		36FD409A23C366910022892C /* AreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FD409923C366910022892C /* AreaViewModel.swift */; };
+		36FEFCBE23C311580052CFD5 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FEFCBD23C311580052CFD5 /* CityModel.swift */; };
+		36FEFCC023C318170052CFD5 /* SingletonGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FEFCBF23C318170052CFD5 /* SingletonGameManager.swift */; };
+		A8E9D45FE5EBB03F828D05E5 /* Pods_DiscoverCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0823215417C2E58E03DCBF4F /* Pods_DiscoverCity.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FAB3A9EB1E9C5F1467792E /* Pods-DiscoverCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoverCity.release.xcconfig"; path = "Target Support Files/Pods-DiscoverCity/Pods-DiscoverCity.release.xcconfig"; sourceTree = "<group>"; };
+		0823215417C2E58E03DCBF4F /* Pods_DiscoverCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscoverCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3628C98F23C37009002C729C /* AreaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDataModel.swift; sourceTree = "<group>"; };
+		36331AFE23C5F68900AF89DC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		36331B0023C5F6AB00AF89DC /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		36331B0223C5F6DA00AF89DC /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		36334CD223C273FC005FCACF /* Discover City.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Discover City.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36334CD523C273FC005FCACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36334CD723C273FC005FCACF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36334CDC23C273FD005FCACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36334CDE23C273FE005FCACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36334CE123C273FE005FCACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36334CE323C273FE005FCACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36334CED23C27576005FCACF /* CityController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityController.xib; sourceTree = "<group>"; };
+		36334CEF23C27583005FCACF /* CityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityController.swift; sourceTree = "<group>"; };
+		36334CF723C27E94005FCACF /* AreaController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaController.xib; sourceTree = "<group>"; };
+		36334CF923C27EA1005FCACF /* AreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaController.swift; sourceTree = "<group>"; };
+		36334CFB23C27ECF005FCACF /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
+		36334CFD23C27EE3005FCACF /* MapsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapsController.xib; sourceTree = "<group>"; };
+		36334CFF23C27F08005FCACF /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		36334D0123C27F16005FCACF /* HistoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryController.xib; sourceTree = "<group>"; };
+		36334D0323C27F72005FCACF /* QuestionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionController.xib; sourceTree = "<group>"; };
+		36334D0523C27F7E005FCACF /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		36334D0723C27F9F005FCACF /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
+		36334D0923C27FAC005FCACF /* ScoreController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreController.xib; sourceTree = "<group>"; };
+		364827E523C4BC0F008E3589 /* MapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDrawer.swift; sourceTree = "<group>"; };
+		364827E723C4F489008E3589 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		364827E923C4F692008E3589 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		36602F4A23CB3CBC00741576 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3678BAE423D3A26D00EB8540 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		368623E823D4FD6900725F7A /* MapsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
+		36B1D30A23D6FB2400A185B9 /* FirestormManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestormManager.swift; sourceTree = "<group>"; };
+		36F87C0A23C4A22E0079073C /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		36F87C0D23C4A67C0079073C /* CreateNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNavigationController.swift; sourceTree = "<group>"; };
+		36FD409723C31F550022892C /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		36FD409923C366910022892C /* AreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewModel.swift; sourceTree = "<group>"; };
+		36FEFCBD23C311580052CFD5 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		36FEFCBF23C318170052CFD5 /* SingletonGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonGameManager.swift; sourceTree = "<group>"; };
+		5629B5300C6B186525491130 /* Pods-DiscoverCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoverCity.debug.xcconfig"; path = "Target Support Files/Pods-DiscoverCity/Pods-DiscoverCity.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36334CCF23C273FC005FCACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E9D45FE5EBB03F828D05E5 /* Pods_DiscoverCity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03F2DEFFB456F8EC077A1616 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5629B5300C6B186525491130 /* Pods-DiscoverCity.debug.xcconfig */,
+				03FAB3A9EB1E9C5F1467792E /* Pods-DiscoverCity.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		355C750CA9B16DCF13F7B311 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0823215417C2E58E03DCBF4F /* Pods_DiscoverCity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36331AFC23C5F64A00AF89DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3678407523C601F500FD3BB9 /* Firebase */,
+				36331AFD23C5F67200AF89DC /* Weather */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		36331AFD23C5F67200AF89DC /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				36331AFE23C5F68900AF89DC /* WeatherManager.swift */,
+				36331B0023C5F6AB00AF89DC /* WeatherModel.swift */,
+				36331B0223C5F6DA00AF89DC /* WeatherData.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		36334CC923C273FC005FCACF = {
+			isa = PBXGroup;
+			children = (
+				36334CD423C273FC005FCACF /* Discover City's */,
+				36334CD323C273FC005FCACF /* Products */,
+				03F2DEFFB456F8EC077A1616 /* Pods */,
+				355C750CA9B16DCF13F7B311 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		36334CD323C273FC005FCACF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36334CD223C273FC005FCACF /* Discover City.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36334CD423C273FC005FCACF /* Discover City's */ = {
+			isa = PBXGroup;
+			children = (
+				36331AFC23C5F64A00AF89DC /* Services */,
+				36F87C0C23C4A6600079073C /* Utilities */,
+				36334CEB23C27509005FCACF /* Model */,
+				36334CEA23C27501005FCACF /* View Model */,
+				36334CE923C274F8005FCACF /* View */,
+				36334CEC23C27510005FCACF /* Controller */,
+				36334CD523C273FC005FCACF /* AppDelegate.swift */,
+				36334CD723C273FC005FCACF /* SceneDelegate.swift */,
+				36334CDB23C273FD005FCACF /* Main.storyboard */,
+				36334CDE23C273FE005FCACF /* Assets.xcassets */,
+				36334CE023C273FE005FCACF /* LaunchScreen.storyboard */,
+				36602F4A23CB3CBC00741576 /* GoogleService-Info.plist */,
+				36334CE323C273FE005FCACF /* Info.plist */,
+			);
+			path = "Discover City's";
+			sourceTree = "<group>";
+		};
+		36334CE923C274F8005FCACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36334CED23C27576005FCACF /* CityController.xib */,
+				36334CF723C27E94005FCACF /* AreaController.xib */,
+				36334CFD23C27EE3005FCACF /* MapsController.xib */,
+				36334D0123C27F16005FCACF /* HistoryController.xib */,
+				36334D0323C27F72005FCACF /* QuestionController.xib */,
+				36334D0923C27FAC005FCACF /* ScoreController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36334CEA23C27501005FCACF /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				36FD409723C31F550022892C /* CityViewModel.swift */,
+				36FD409923C366910022892C /* AreaViewModel.swift */,
+				36F87C0A23C4A22E0079073C /* MapsViewModel.swift */,
+				364827E723C4F489008E3589 /* HistoryViewModel.swift */,
+				364827E923C4F692008E3589 /* QuestionViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		36334CEB23C27509005FCACF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36FEFCBD23C311580052CFD5 /* CityModel.swift */,
+				3628C98F23C37009002C729C /* AreaDataModel.swift */,
+				368623E823D4FD6900725F7A /* MapsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36334CEC23C27510005FCACF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36334CEF23C27583005FCACF /* CityController.swift */,
+				36334CF923C27EA1005FCACF /* AreaController.swift */,
+				36334CFB23C27ECF005FCACF /* MapsController.swift */,
+				36334CFF23C27F08005FCACF /* HistoryController.swift */,
+				36334D0523C27F7E005FCACF /* QuestionController.swift */,
+				36334D0723C27F9F005FCACF /* ScoreController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3678407523C601F500FD3BB9 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				36B1D30A23D6FB2400A185B9 /* FirestormManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		36F87C0C23C4A6600079073C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				36FEFCBF23C318170052CFD5 /* SingletonGameManager.swift */,
+				36F87C0D23C4A67C0079073C /* CreateNavigationController.swift */,
+				364827E523C4BC0F008E3589 /* MapDrawer.swift */,
+				3678BAE423D3A26D00EB8540 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36334CD123C273FC005FCACF /* DiscoverCity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36334CE623C273FE005FCACF /* Build configuration list for PBXNativeTarget "DiscoverCity" */;
+			buildPhases = (
+				9929002349FCCB0206A0F29C /* [CP] Check Pods Manifest.lock */,
+				36334CCE23C273FC005FCACF /* Sources */,
+				36334CCF23C273FC005FCACF /* Frameworks */,
+				36334CD023C273FC005FCACF /* Resources */,
+				8495ED5FDAAD692E715804EA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiscoverCity;
+			productName = "Discover City's";
+			productReference = 36334CD223C273FC005FCACF /* Discover City.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36334CCA23C273FC005FCACF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ferhan Akkan";
+				TargetAttributes = {
+					36334CD123C273FC005FCACF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 36334CCD23C273FC005FCACF /* Build configuration list for PBXProject "DiscoverCity" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36334CC923C273FC005FCACF;
+			productRefGroup = 36334CD323C273FC005FCACF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36334CD123C273FC005FCACF /* DiscoverCity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36334CD023C273FC005FCACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36334CE223C273FE005FCACF /* LaunchScreen.storyboard in Resources */,
+				36334D0A23C27FAC005FCACF /* ScoreController.xib in Resources */,
+				36334CDF23C273FE005FCACF /* Assets.xcassets in Resources */,
+				36334D0223C27F16005FCACF /* HistoryController.xib in Resources */,
+				36334D0423C27F72005FCACF /* QuestionController.xib in Resources */,
+				36334CF823C27E94005FCACF /* AreaController.xib in Resources */,
+				36334CEE23C27576005FCACF /* CityController.xib in Resources */,
+				36602F4B23CB3CBC00741576 /* GoogleService-Info.plist in Resources */,
+				36334CFE23C27EE3005FCACF /* MapsController.xib in Resources */,
+				36334CDD23C273FD005FCACF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8495ED5FDAAD692E715804EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiscoverCity/Pods-DiscoverCity-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiscoverCity/Pods-DiscoverCity-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DiscoverCity/Pods-DiscoverCity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9929002349FCCB0206A0F29C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiscoverCity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36334CCE23C273FC005FCACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36F87C0E23C4A67C0079073C /* CreateNavigationController.swift in Sources */,
+				3628C99023C37009002C729C /* AreaDataModel.swift in Sources */,
+				36F87C0B23C4A22E0079073C /* MapsViewModel.swift in Sources */,
+				36B1D30B23D6FB2400A185B9 /* FirestormManager.swift in Sources */,
+				36334D0823C27F9F005FCACF /* ScoreController.swift in Sources */,
+				368623E923D4FD6900725F7A /* MapsModel.swift in Sources */,
+				364827E823C4F489008E3589 /* HistoryViewModel.swift in Sources */,
+				3678BAE523D3A26D00EB8540 /* Constants.swift in Sources */,
+				36FEFCBE23C311580052CFD5 /* CityModel.swift in Sources */,
+				36334D0623C27F7E005FCACF /* QuestionController.swift in Sources */,
+				36FEFCC023C318170052CFD5 /* SingletonGameManager.swift in Sources */,
+				36FD409A23C366910022892C /* AreaViewModel.swift in Sources */,
+				36334CFA23C27EA1005FCACF /* AreaController.swift in Sources */,
+				36334CF023C27583005FCACF /* CityController.swift in Sources */,
+				364827EA23C4F692008E3589 /* QuestionViewModel.swift in Sources */,
+				36FD409823C31F550022892C /* CityViewModel.swift in Sources */,
+				36334CD623C273FC005FCACF /* AppDelegate.swift in Sources */,
+				36331B0123C5F6AB00AF89DC /* WeatherModel.swift in Sources */,
+				36334CD823C273FC005FCACF /* SceneDelegate.swift in Sources */,
+				36331B0323C5F6DA00AF89DC /* WeatherData.swift in Sources */,
+				36331AFF23C5F68900AF89DC /* WeatherManager.swift in Sources */,
+				364827E623C4BC0F008E3589 /* MapDrawer.swift in Sources */,
+				36334D0023C27F08005FCACF /* HistoryController.swift in Sources */,
+				36334CFC23C27ECF005FCACF /* MapsController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		36334CDB23C273FD005FCACF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36334CDC23C273FD005FCACF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36334CE023C273FE005FCACF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36334CE123C273FE005FCACF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36334CE423C273FE005FCACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36334CE523C273FE005FCACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36334CE723C273FE005FCACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5629B5300C6B186525491130 /* Pods-DiscoverCity.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F3LJ97YAF;
+				INFOPLIST_FILE = "Discover City's/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ferhanakkan.Discover-City-s";
+				PRODUCT_NAME = "Discover City";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36334CE823C273FE005FCACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FAB3A9EB1E9C5F1467792E /* Pods-DiscoverCity.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F3LJ97YAF;
+				INFOPLIST_FILE = "Discover City's/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ferhanakkan.Discover-City-s";
+				PRODUCT_NAME = "Discover City";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36334CCD23C273FC005FCACF /* Build configuration list for PBXProject "DiscoverCity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36334CE423C273FE005FCACF /* Debug */,
+				36334CE523C273FE005FCACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36334CE623C273FE005FCACF /* Build configuration list for PBXNativeTarget "DiscoverCity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36334CE723C273FE005FCACF /* Debug */,
+				36334CE823C273FE005FCACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36334CCA23C273FC005FCACF /* Project object */;
+}

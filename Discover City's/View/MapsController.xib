@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="6qL-ck-LIb" customClass="MapsController" customModule="DiscoverCity" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="gvp-Px-ner">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hkb-He-0r2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    </mapView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrQ-eh-o0a" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                        <rect key="frame" x="207" y="94" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.87450980389999999" green="0.52156862749999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Hkb-He-0r2" secondAttribute="trailing" id="AFt-bN-Fv6"/>
+                    <constraint firstAttribute="top" secondItem="Hkb-He-0r2" secondAttribute="top" id="THY-BO-WyX"/>
+                    <constraint firstItem="BrQ-eh-o0a" firstAttribute="top" secondItem="VVq-YG-vos" secondAttribute="top" constant="50" id="U5a-rT-b7h"/>
+                    <constraint firstAttribute="leading" secondItem="Hkb-He-0r2" secondAttribute="leading" id="bsj-tn-BGq"/>
+                    <constraint firstAttribute="bottom" secondItem="Hkb-He-0r2" secondAttribute="bottom" id="g8N-Aj-slJ"/>
+                    <constraint firstItem="BrQ-eh-o0a" firstAttribute="centerX" secondItem="gvp-Px-ner" secondAttribute="centerX" id="q8w-Rk-Brf"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="VVq-YG-vos"/>
+            </view>
+            <connections>
+                <outlet property="destinationLabel" destination="BrQ-eh-o0a" id="NkO-pT-Dy7"/>
+                <outlet property="mapView" destination="Hkb-He-0r2" id="CBu-GL-gxd"/>
+            </connections>
+            <point key="canvasLocation" x="419" y="-232"/>
+        </viewController>
+    </objects>
+</document>
