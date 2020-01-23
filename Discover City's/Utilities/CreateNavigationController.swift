@@ -12,7 +12,9 @@ class CreateNavigationController {
     
     class func createNavigatonController(owner: Any) -> UINavigationController{
         let navigationController = UINavigationController()
+//         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.backgroundColor = UIColor.init(red: 15/255, green: 76/255, blue: 184/255, alpha: 1.0)
+       
         
         let appStartPoint = Bundle.main.loadNibNamed(K.city, owner: owner, options: nil)?.first as! CityController
         navigationController.setViewControllers([appStartPoint], animated: true)
