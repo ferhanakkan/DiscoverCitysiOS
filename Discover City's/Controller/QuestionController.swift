@@ -79,6 +79,13 @@ extension QuestionController {
     func setNavigationController() {
         navigationItem.hidesBackButton = true
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
+    }
+    
+    @objc func leaveGame() {
+        SingletonGameManager.shared.overTimer()
+        let message = SingletonGameManager.shared.leaveGame(self)
+        self.present(message, animated: true)
     }
 }
       

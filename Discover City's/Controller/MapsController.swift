@@ -36,6 +36,13 @@ extension MapsController {
         destinationLabel.text = mapsViewModel.getdestinationAreaName()
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "location"), style: .plain, target: self, action: #selector(findMe))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
+    }
+    
+    @objc func leaveGame() {
+        SingletonGameManager.shared.overTimer()
+        let message = SingletonGameManager.shared.leaveGame(self)
+        self.present(message, animated: true)
     }
     
     @objc func findMe() {

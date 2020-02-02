@@ -34,7 +34,6 @@ class SingletonGameManager {
 
 extension SingletonGameManager {
     func startTimer() {
-        timeInt = 0
         time=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeCounter), userInfo: nil, repeats: true)
     }
     
@@ -106,6 +105,23 @@ extension SingletonGameManager {
         }
         alert.addAction(okButton)
         return alert
+    }
+    
+    func leaveGame(_ owner: Any) -> UIAlertController {
+        let alert = UIAlertController(title: "Do you want to leave game?" , message: "If you want to leave game press Leave , if you want to continue press Continue" , preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "Leave", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            SingletonGameManager.shared.resetScore()
+            SingletonGameManager.shared.resetTime()
+            SingletonGameManager.shared.repeatControlerForScreenPass = true
+            (owner as AnyObject).view.window?.rootViewController = CreateNavigationController.createNavigatonController(owner: owner)
+        }
+        let continueButton = UIAlertAction(title: "Continue", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            SingletonGameManager.shared.startTimer()
+        }
+        alert.addAction(okButton)
+        alert.addAction(continueButton)
+        return alert
+
     }
 }
 
