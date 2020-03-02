@@ -13,7 +13,9 @@ import CLTypingLabel
 
 class MapsController: UIViewController {
     
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var destinationLabel: CLTypingLabel!
+    @IBOutlet weak var estimetedTime: CLTypingLabel!
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
@@ -24,6 +26,7 @@ class MapsController: UIViewController {
         setMapview()
         setCLLocationManager()
         setNavigationBar()
+        titleView.cornerRadius = 20
     }
 }
 
@@ -35,8 +38,16 @@ extension MapsController {
         navigationItem.hidesBackButton = true
         destinationLabel.text = mapsViewModel.getdestinationAreaName()
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "location"), style: .plain, target: self, action: #selector(findMe))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
+        if #available(iOS 13.0, *) {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "location"), style: .plain, target: self, action: #selector(findMe))
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 13.0, *) {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     @objc func leaveGame() {

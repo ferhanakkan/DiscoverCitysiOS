@@ -16,7 +16,7 @@ class CreateNavigationController {
         navigationController.navigationBar.backgroundColor = UIColor.init(red: 15/255, green: 76/255, blue: 184/255, alpha: 1.0)
        
         
-        let appStartPoint = Bundle.main.loadNibNamed(K.city, owner: owner, options: nil)?.first as! CityController
+        let appStartPoint = Bundle.main.loadNibNamed("WelcomeController", owner: owner, options: nil)?.first as! WelcomeController
         navigationController.setViewControllers([appStartPoint], animated: true)
         return navigationController
     }

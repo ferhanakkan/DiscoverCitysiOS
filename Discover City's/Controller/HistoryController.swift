@@ -51,8 +51,13 @@ class HistoryController: UIViewController {
 extension HistoryController {
     func setNavigationController() {
         navigationItem.hidesBackButton = true
+        
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
+        if #available(iOS 13.0, *) {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     @objc func leaveGame() {

@@ -13,6 +13,8 @@ class SingletonGameManager {
     
     static let shared = SingletonGameManager()
     
+    let reachability: Reachability = try! Reachability(hostname: "google.com")
+    
     var firestorm = FirestormManager()
     
     var selectedCity: String?
@@ -133,4 +135,33 @@ extension SingletonGameManager {
             selectedAreaArray = data.sorted { $0.point < $1.point }
             selectedAreaModel = selectedAreaArray![arrayCounter]
     }
+}
+
+//MARK: - Reachability
+
+extension SingletonGameManager {
+
+     func setReachability() {
+         do {
+             try reachability.startNotifier()
+         } catch {
+             assertionFailure("Unable to start\nnotifier")
+         }
+        
+        reachability.whenUnreachable = { reachability in
+            let alert = UIAlertController(title: "Your internet connection has been lost!", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Retry", style: .cancel, handler: { action in
+                if self.reachability.connection == .unavailable {
+                    UIApplication.getPresentedViewController()!.present(alert, animated: true, completion: nil)
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "Quit", style: .default, handler: { action in
+                exit(0)
+            }))
+            UIApplication.getPresentedViewController()!.present(alert, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
 }

@@ -11,23 +11,14 @@ import CoreLocation
 import CLTypingLabel
 
 class CityController: UIViewController {
-    @IBOutlet weak var textLabel: CLTypingLabel!
     
+    @IBOutlet weak var textLabel: CLTypingLabel!
     @IBOutlet weak var tableView: UITableView!
     
     var cityViewModel = CityViewModel()
     var locationManager = CLLocationManager()
     var weatherManager = WeatherManager()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +28,8 @@ class CityController: UIViewController {
         setWeatherManager()
         textLabel.charInterval = 0.05
         textLabel.text = K.cityLabel
+        
+        tableView.register(UINib(nibName: "TableSelectionCell", bundle: nil), forCellReuseIdentifier: "TableSelectionCell")
     }
 }
 //MARK: - TableViewDelegate
@@ -53,10 +46,9 @@ extension CityController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.textColor = UIColor.init(red: 223/255, green: 133/255, blue: 67/255, alpha: 1)
-        cell.backgroundColor = UIColor.clear
-        cell.textLabel?.text = cityViewModel.cityModel.city[indexPath.row]
+         let cell = tableView.dequeueReusableCell(withIdentifier: "TableSelectionCell" , for: indexPath) as! TableSelectionCell
+        cell.backgroundColor = .clear
+        cell.nameLabel.text = cityViewModel.cityModel.city[indexPath.row]
         return  cell
     }
     
@@ -104,11 +96,16 @@ extension CityController: WeatherManagerDelegate {
         DispatchQueue.main.async {
             self.navigationItem.titleView = self.cityViewModel.weatherUIViewSetter(weather: weather)
             self.locationManager.stopUpdatingLocation()
+            self.setNavigationController()
         }
     }
     
     func didFailWithError(error: Error) {
         print(error)
+    }
+    
+    func setNavigationController() {
+        navigationItem.titleView = SingletonGameManager.shared.weatherUIView
     }
     
     

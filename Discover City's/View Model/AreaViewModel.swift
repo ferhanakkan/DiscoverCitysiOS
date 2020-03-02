@@ -47,17 +47,5 @@ class AreaViewModel {
         }
     }
 }
-//MARK: - Create CEll
-    
-extension AreaViewModel {
-    
-    func createCell(indexPath i: Int) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = UIColor.clear
-        cell.textLabel?.textColor = UIColor.init(red: 223/255, green: 133/255, blue: 67/255, alpha: 1)
-        cell.textLabel?.text = areaArray[i]
-        return cell
-    }
-}
-    
+ 
 

@@ -9,6 +9,7 @@
 import UIKit
 import CLTypingLabel
 
+
 class AreaController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -24,6 +25,12 @@ class AreaController: UIViewController {
         areaViewModel.setTableviewArea(selection: SingletonGameManager.shared.selectedCity!)
         textLabel.charInterval = 0.05
         textLabel.text = K.areaLabel
+        tableView.register(UINib(nibName: "TableSelectionCell", bundle: nil), forCellReuseIdentifier: "TableSelectionCell")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        LoadingView.hide()
     }
 }
 
@@ -41,10 +48,14 @@ extension AreaController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return  areaViewModel.createCell(indexPath: indexPath.row)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableSelectionCell" , for: indexPath) as! TableSelectionCell
+        cell.backgroundColor = .clear
+        cell.nameLabel.text = String(areaViewModel.areaArray[indexPath.row])
+         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        LoadingView.show()
         SingletonGameManager.shared.selectedArea = areaViewModel.areaArray[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         

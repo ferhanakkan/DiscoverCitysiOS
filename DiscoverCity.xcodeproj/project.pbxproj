@@ -31,10 +31,22 @@
 		364827E623C4BC0F008E3589 /* MapDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364827E523C4BC0F008E3589 /* MapDrawer.swift */; };
 		364827E823C4F489008E3589 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364827E723C4F489008E3589 /* HistoryViewModel.swift */; };
 		364827EA23C4F692008E3589 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364827E923C4F692008E3589 /* QuestionViewModel.swift */; };
+		364E634F240A44120004FD8F /* HowToController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364E634E240A44120004FD8F /* HowToController.xib */; };
+		364E6351240A44240004FD8F /* HowToController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E6350240A44240004FD8F /* HowToController.swift */; };
+		364E6354240A4E330004FD8F /* HowToCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364E6353240A4E330004FD8F /* HowToCollectionViewCell.xib */; };
+		364E6356240A4E480004FD8F /* HowToCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E6355240A4E480004FD8F /* HowToCollectionViewCell.swift */; };
 		36602F4B23CB3CBC00741576 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36602F4A23CB3CBC00741576 /* GoogleService-Info.plist */; };
 		3678BAE523D3A26D00EB8540 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3678BAE423D3A26D00EB8540 /* Constants.swift */; };
 		368623E923D4FD6900725F7A /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368623E823D4FD6900725F7A /* MapsModel.swift */; };
+		36A92F7E2409902300A17DF0 /* TableSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A92F7D2409902300A17DF0 /* TableSelectionCell.xib */; };
+		36A92F802409903500A17DF0 /* TableSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A92F7F2409903500A17DF0 /* TableSelectionCell.swift */; };
+		36A92F83240991FB00A17DF0 /* LoadingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A92F82240991FB00A17DF0 /* LoadingVIew.swift */; };
+		36A92F862409931900A17DF0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A92F852409931900A17DF0 /* Reachability.swift */; };
+		36A92F89240995C600A17DF0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A92F88240995C600A17DF0 /* UIView.swift */; };
+		36A92F8B240998BE00A17DF0 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A92F8A240998BE00A17DF0 /* WelcomeController.swift */; };
+		36A92F8F240998E700A17DF0 /* WelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A92F8E240998E700A17DF0 /* WelcomeController.xib */; };
 		36B1D30B23D6FB2400A185B9 /* FirestormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1D30A23D6FB2400A185B9 /* FirestormManager.swift */; };
+		36F24357240D6F6D0073EAD2 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F24356240D6F6D0073EAD2 /* UIApplication.swift */; };
 		36F87C0B23C4A22E0079073C /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F87C0A23C4A22E0079073C /* MapsViewModel.swift */; };
 		36F87C0E23C4A67C0079073C /* CreateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F87C0D23C4A67C0079073C /* CreateNavigationController.swift */; };
 		36FD409823C31F550022892C /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FD409723C31F550022892C /* CityViewModel.swift */; };
@@ -73,10 +85,22 @@
 		364827E523C4BC0F008E3589 /* MapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDrawer.swift; sourceTree = "<group>"; };
 		364827E723C4F489008E3589 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		364827E923C4F692008E3589 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		364E634E240A44120004FD8F /* HowToController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowToController.xib; sourceTree = "<group>"; };
+		364E6350240A44240004FD8F /* HowToController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToController.swift; sourceTree = "<group>"; };
+		364E6353240A4E330004FD8F /* HowToCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowToCollectionViewCell.xib; sourceTree = "<group>"; };
+		364E6355240A4E480004FD8F /* HowToCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToCollectionViewCell.swift; sourceTree = "<group>"; };
 		36602F4A23CB3CBC00741576 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3678BAE423D3A26D00EB8540 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		368623E823D4FD6900725F7A /* MapsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
+		36A92F7D2409902300A17DF0 /* TableSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSelectionCell.xib; sourceTree = "<group>"; };
+		36A92F7F2409903500A17DF0 /* TableSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSelectionCell.swift; sourceTree = "<group>"; };
+		36A92F82240991FB00A17DF0 /* LoadingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVIew.swift; sourceTree = "<group>"; };
+		36A92F852409931900A17DF0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		36A92F88240995C600A17DF0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		36A92F8A240998BE00A17DF0 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		36A92F8E240998E700A17DF0 /* WelcomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeController.xib; sourceTree = "<group>"; };
 		36B1D30A23D6FB2400A185B9 /* FirestormManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestormManager.swift; sourceTree = "<group>"; };
+		36F24356240D6F6D0073EAD2 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		36F87C0A23C4A22E0079073C /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
 		36F87C0D23C4A67C0079073C /* CreateNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNavigationController.swift; sourceTree = "<group>"; };
 		36FD409723C31F550022892C /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +179,9 @@
 		36334CD423C273FC005FCACF /* Discover City's */ = {
 			isa = PBXGroup;
 			children = (
+				36A92F872409958E00A17DF0 /* Extension */,
+				36A92F842409930A00A17DF0 /* External */,
+				36A92F7B24098ECD00A17DF0 /* Custom View */,
 				36331AFC23C5F64A00AF89DC /* Services */,
 				36F87C0C23C4A6600079073C /* Utilities */,
 				36334CEB23C27509005FCACF /* Model */,
@@ -175,6 +202,7 @@
 		36334CE923C274F8005FCACF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36A92F8E240998E700A17DF0 /* WelcomeController.xib */,
 				36334CED23C27576005FCACF /* CityController.xib */,
 				36334CF723C27E94005FCACF /* AreaController.xib */,
 				36334CFD23C27EE3005FCACF /* MapsController.xib */,
@@ -210,6 +238,7 @@
 		36334CEC23C27510005FCACF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36A92F8A240998BE00A17DF0 /* WelcomeController.swift */,
 				36334CEF23C27583005FCACF /* CityController.swift */,
 				36334CF923C27EA1005FCACF /* AreaController.swift */,
 				36334CFB23C27ECF005FCACF /* MapsController.swift */,
@@ -220,12 +249,75 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		364E634D240A43FB0004FD8F /* How To Play */ = {
+			isa = PBXGroup;
+			children = (
+				364E6352240A4E1B0004FD8F /* Cell */,
+				364E634E240A44120004FD8F /* HowToController.xib */,
+				364E6350240A44240004FD8F /* HowToController.swift */,
+			);
+			path = "How To Play";
+			sourceTree = "<group>";
+		};
+		364E6352240A4E1B0004FD8F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				364E6353240A4E330004FD8F /* HowToCollectionViewCell.xib */,
+				364E6355240A4E480004FD8F /* HowToCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3678407523C601F500FD3BB9 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
 				36B1D30A23D6FB2400A185B9 /* FirestormManager.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		36A92F7B24098ECD00A17DF0 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				364E634D240A43FB0004FD8F /* How To Play */,
+				36A92F81240991E500A17DF0 /* Loading VIew */,
+				36A92F7C2409900B00A17DF0 /* Table View Cell */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		36A92F7C2409900B00A17DF0 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				36A92F7D2409902300A17DF0 /* TableSelectionCell.xib */,
+				36A92F7F2409903500A17DF0 /* TableSelectionCell.swift */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		36A92F81240991E500A17DF0 /* Loading VIew */ = {
+			isa = PBXGroup;
+			children = (
+				36A92F82240991FB00A17DF0 /* LoadingVIew.swift */,
+			);
+			path = "Loading VIew";
+			sourceTree = "<group>";
+		};
+		36A92F842409930A00A17DF0 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				36A92F852409931900A17DF0 /* Reachability.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		36A92F872409958E00A17DF0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				36A92F88240995C600A17DF0 /* UIView.swift */,
+				36F24356240D6F6D0073EAD2 /* UIApplication.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		36F87C0C23C4A6600079073C /* Utilities */ = {
@@ -300,12 +392,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				36334CE223C273FE005FCACF /* LaunchScreen.storyboard in Resources */,
+				36A92F7E2409902300A17DF0 /* TableSelectionCell.xib in Resources */,
+				36A92F8F240998E700A17DF0 /* WelcomeController.xib in Resources */,
 				36334D0A23C27FAC005FCACF /* ScoreController.xib in Resources */,
 				36334CDF23C273FE005FCACF /* Assets.xcassets in Resources */,
+				364E634F240A44120004FD8F /* HowToController.xib in Resources */,
 				36334D0223C27F16005FCACF /* HistoryController.xib in Resources */,
 				36334D0423C27F72005FCACF /* QuestionController.xib in Resources */,
 				36334CF823C27E94005FCACF /* AreaController.xib in Resources */,
 				36334CEE23C27576005FCACF /* CityController.xib in Resources */,
+				364E6354240A4E330004FD8F /* HowToCollectionViewCell.xib in Resources */,
 				36602F4B23CB3CBC00741576 /* GoogleService-Info.plist in Resources */,
 				36334CFE23C27EE3005FCACF /* MapsController.xib in Resources */,
 				36334CDD23C273FD005FCACF /* Main.storyboard in Resources */,
@@ -361,11 +457,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F24357240D6F6D0073EAD2 /* UIApplication.swift in Sources */,
 				36F87C0E23C4A67C0079073C /* CreateNavigationController.swift in Sources */,
 				3628C99023C37009002C729C /* AreaDataModel.swift in Sources */,
 				36F87C0B23C4A22E0079073C /* MapsViewModel.swift in Sources */,
+				36A92F802409903500A17DF0 /* TableSelectionCell.swift in Sources */,
 				36B1D30B23D6FB2400A185B9 /* FirestormManager.swift in Sources */,
+				36A92F862409931900A17DF0 /* Reachability.swift in Sources */,
 				36334D0823C27F9F005FCACF /* ScoreController.swift in Sources */,
+				364E6351240A44240004FD8F /* HowToController.swift in Sources */,
 				368623E923D4FD6900725F7A /* MapsModel.swift in Sources */,
 				364827E823C4F489008E3589 /* HistoryViewModel.swift in Sources */,
 				3678BAE523D3A26D00EB8540 /* Constants.swift in Sources */,
@@ -378,10 +478,14 @@
 				364827EA23C4F692008E3589 /* QuestionViewModel.swift in Sources */,
 				36FD409823C31F550022892C /* CityViewModel.swift in Sources */,
 				36334CD623C273FC005FCACF /* AppDelegate.swift in Sources */,
+				364E6356240A4E480004FD8F /* HowToCollectionViewCell.swift in Sources */,
 				36331B0123C5F6AB00AF89DC /* WeatherModel.swift in Sources */,
 				36334CD823C273FC005FCACF /* SceneDelegate.swift in Sources */,
 				36331B0323C5F6DA00AF89DC /* WeatherData.swift in Sources */,
+				36A92F83240991FB00A17DF0 /* LoadingVIew.swift in Sources */,
+				36A92F8B240998BE00A17DF0 /* WelcomeController.swift in Sources */,
 				36331AFF23C5F68900AF89DC /* WeatherManager.swift in Sources */,
+				36A92F89240995C600A17DF0 /* UIView.swift in Sources */,
 				364827E623C4BC0F008E3589 /* MapDrawer.swift in Sources */,
 				36334D0023C27F08005FCACF /* HistoryController.swift in Sources */,
 				36334CFC23C27ECF005FCACF /* MapsController.swift in Sources */,
@@ -533,12 +637,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				INFOPLIST_FILE = "Discover City's/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.Discover;
 				PRODUCT_NAME = "Discover City";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -556,12 +660,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				INFOPLIST_FILE = "Discover City's/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.Discover;
 				PRODUCT_NAME = "Discover City";
 				PROVISIONING_PROFILE_SPECIFIER = "";

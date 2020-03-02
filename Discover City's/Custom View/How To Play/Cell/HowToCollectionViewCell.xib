@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xbO-Sz-dIt" customClass="HowToCollectionViewCell" customModule="Discover_City" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="578" height="972"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T6v-je-PSN">
+                <rect key="frame" x="0.0" y="0.0" width="578" height="972"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="Qj2-bf-rLy">
+                        <rect key="frame" x="214" y="50" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="RRK-Fd-ljh"/>
+                            <constraint firstAttribute="height" constant="150" id="icN-aH-3Kt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipb-SZ-GoF">
+                        <rect key="frame" x="20" y="320" width="538" height="602"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWD-GK-GlK">
+                        <rect key="frame" x="20" y="250" width="538" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="xl4-Ud-4gx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cWD-GK-GlK" firstAttribute="top" secondItem="Qj2-bf-rLy" secondAttribute="bottom" constant="50" id="5Np-30-b2G"/>
+                    <constraint firstAttribute="bottom" secondItem="Ipb-SZ-GoF" secondAttribute="bottom" constant="50" id="GzY-xv-2a0"/>
+                    <constraint firstItem="Qj2-bf-rLy" firstAttribute="top" secondItem="T6v-je-PSN" secondAttribute="top" constant="50" id="J25-Ek-lOV"/>
+                    <constraint firstAttribute="trailing" secondItem="cWD-GK-GlK" secondAttribute="trailing" constant="20" id="YfE-QU-rRc"/>
+                    <constraint firstAttribute="trailing" secondItem="Ipb-SZ-GoF" secondAttribute="trailing" constant="20" symbolic="YES" id="daR-55-KI2"/>
+                    <constraint firstItem="cWD-GK-GlK" firstAttribute="leading" secondItem="T6v-je-PSN" secondAttribute="leading" constant="20" id="g9i-Gf-f9j"/>
+                    <constraint firstItem="Ipb-SZ-GoF" firstAttribute="centerX" secondItem="T6v-je-PSN" secondAttribute="centerX" id="gjS-Uu-mpU"/>
+                    <constraint firstItem="Ipb-SZ-GoF" firstAttribute="top" secondItem="cWD-GK-GlK" secondAttribute="bottom" constant="30" id="mho-E6-NZa"/>
+                    <constraint firstItem="Ipb-SZ-GoF" firstAttribute="leading" secondItem="T6v-je-PSN" secondAttribute="leading" constant="20" symbolic="YES" id="o8k-SN-PVP"/>
+                    <constraint firstItem="Qj2-bf-rLy" firstAttribute="centerX" secondItem="T6v-je-PSN" secondAttribute="centerX" id="z1h-95-55r"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="578" height="972"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="Ipb-SZ-GoF" id="CZk-nB-WXO"/>
+                <outlet property="imageView" destination="Qj2-bf-rLy" id="N1K-9p-TvW"/>
+                <outlet property="titleLabel" destination="cWD-GK-GlK" id="ocB-EZ-pDg"/>
+            </connections>
+            <point key="canvasLocation" x="508.69565217391306" y="351.5625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sun" width="512" height="512"/>
+    </resources>
+</document>
