@@ -70,6 +70,7 @@ extension MapsViewModel {
         return mapDrawer.setRegion(currentLatitude: mapsModel.currentLatitude!, currentLongitude: mapsModel.currentLongitude!)
     }
     
+    
     mutating func draw() -> Bool {
         if mapsModel.drawController {
             mapsModel.drawController = false

@@ -59,6 +59,7 @@ struct MapDrawer {
         directionRequest.transportType = .walking
         
         let directions = MKDirections(request: directionRequest)
+        
         return directions
         
     }

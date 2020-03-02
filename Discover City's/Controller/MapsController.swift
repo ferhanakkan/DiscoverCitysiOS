@@ -89,6 +89,8 @@ extension MapsController: MKMapViewDelegate {
                 self.mapView.addOverlay((route?.polyline)!, level: MKOverlayLevel.aboveRoads)
                 let rect = route?.polyline.boundingMapRect
                 self.mapView.setRegion(MKCoordinateRegion(rect!), animated: false)
+                self.estimetedTime.text = "\(Int((route?.expectedTravelTime)! / 60)) minute walking distance"
+                print(self.estimetedTime.text)
             }
             
             self.mapView.setRegion(self.mapsViewModel.setRegion(), animated: true)
