@@ -16,43 +16,41 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3oe-xA-G1M">
-                        <rect key="frame" x="10" y="44" width="394" height="798"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityBlack" translatesAutoresizingMaskIntoConstraints="NO" id="w4C-qb-Oa6">
-                                <rect key="frame" x="0.0" y="0.0" width="394" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="SyD-gL-ISQ"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select in witch city do you want to play?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMW-C1-T5X" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="0.0" y="320" width="394" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Qmx-ZY-xmD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" red="0.10588235294117647" green="0.14901960784313725" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1aE-GK-1X6">
-                                <rect key="frame" x="0.0" y="440" width="394" height="358"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="336" id="OrT-dW-SXN"/>
-                                </constraints>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexColor" red="0.87450980389999999" green="0.52156862749999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select in witch city do you want to play?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMW-C1-T5X">
+                        <rect key="frame" x="20" y="284" width="374" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Qmx-ZY-xmD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1aE-GK-1X6">
+                        <rect key="frame" x="20" y="404" width="374" height="438"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" red="0.87450980389999999" green="0.52156862749999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityBlack" translatesAutoresizingMaskIntoConstraints="NO" id="w4C-qb-Oa6">
+                        <rect key="frame" x="20" y="64" width="374" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="SyD-gL-ISQ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
-                <color key="backgroundColor" name="Color"/>
+                <color key="backgroundColor" name="View Background Color"/>
                 <constraints>
-                    <constraint firstItem="3oe-xA-G1M" firstAttribute="top" secondItem="ZaW-Be-74a" secondAttribute="top" id="MG3-3U-FZ1"/>
-                    <constraint firstItem="ZaW-Be-74a" firstAttribute="bottom" secondItem="3oe-xA-G1M" secondAttribute="bottom" constant="20" id="ZrA-1k-AKE"/>
-                    <constraint firstAttribute="leading" secondItem="3oe-xA-G1M" secondAttribute="leading" constant="-10" id="eoy-TU-lfd"/>
-                    <constraint firstAttribute="trailing" secondItem="3oe-xA-G1M" secondAttribute="trailing" constant="10" id="kkc-rW-A60"/>
+                    <constraint firstItem="w4C-qb-Oa6" firstAttribute="top" secondItem="ZaW-Be-74a" secondAttribute="top" constant="20" id="11j-jc-df0"/>
+                    <constraint firstItem="1aE-GK-1X6" firstAttribute="leading" secondItem="ZaW-Be-74a" secondAttribute="leading" constant="20" id="Fuc-ZT-in1"/>
+                    <constraint firstAttribute="trailing" secondItem="hMW-C1-T5X" secondAttribute="trailing" constant="20" id="JSX-Q4-3g6"/>
+                    <constraint firstItem="w4C-qb-Oa6" firstAttribute="leading" secondItem="ZaW-Be-74a" secondAttribute="leading" constant="20" id="Ozf-RH-ANL"/>
+                    <constraint firstItem="ZaW-Be-74a" firstAttribute="trailing" secondItem="w4C-qb-Oa6" secondAttribute="trailing" constant="20" id="frA-va-q8i"/>
+                    <constraint firstItem="hMW-C1-T5X" firstAttribute="leading" secondItem="rW6-i2-tTW" secondAttribute="leading" constant="20" id="rJI-oy-MWU"/>
+                    <constraint firstItem="ZaW-Be-74a" firstAttribute="trailing" secondItem="1aE-GK-1X6" secondAttribute="trailing" constant="20" id="sdT-Xj-adX"/>
+                    <constraint firstItem="ZaW-Be-74a" firstAttribute="bottom" secondItem="1aE-GK-1X6" secondAttribute="bottom" constant="20" id="tQm-wr-F5y"/>
+                    <constraint firstItem="hMW-C1-T5X" firstAttribute="top" secondItem="w4C-qb-Oa6" secondAttribute="bottom" constant="20" id="uqI-8e-WLy"/>
+                    <constraint firstItem="1aE-GK-1X6" firstAttribute="top" secondItem="hMW-C1-T5X" secondAttribute="bottom" constant="20" id="vyJ-vE-3uk"/>
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="ZaW-Be-74a"/>
             </view>
@@ -65,8 +63,8 @@
     </objects>
     <resources>
         <image name="cityBlack" width="5746" height="1513"/>
-        <namedColor name="Color">
-            <color red="0.73299998044967651" green="0.88200002908706665" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="View Background Color">
+            <color red="0.59604488218753171" green="0.55015124145569416" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

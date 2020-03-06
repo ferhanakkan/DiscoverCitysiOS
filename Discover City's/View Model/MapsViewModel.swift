@@ -86,6 +86,7 @@ extension MapsViewModel {
         if (mapsModel.currentLatitude!) >= (mapsModel.destinationLatitude!-0.0005) && mapsModel.currentLatitude! <= (mapsModel.destinationLatitude!+0.0005) && mapsModel.currentLongitude! >= (mapsModel.destinationLongitude!-0.0005) && mapsModel.currentLongitude! <= (mapsModel.destinationLongitude!+0.0005) {
             if mapsModel.repeatShowDefender {
                 if let toHistory = Bundle.main.loadNibNamed(K.history, owner: owner, options: nil)?.first  as? HistoryController {
+                    LoadingView.show()
                     (owner as AnyObject).navigationController?.show(toHistory, sender: nil)
                 }
                 mapsModel.repeatShowDefender = false

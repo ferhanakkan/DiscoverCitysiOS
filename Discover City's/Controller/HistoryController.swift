@@ -8,13 +8,13 @@
 
 import UIKit
 import Kingfisher
-import CLTypingLabel
 import Firebase
 
 class HistoryController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var historyLabel: CLTypingLabel!
+    @IBOutlet weak var historyLabel: UILabel!
+    @IBOutlet weak var outletButton: UIButton!
     
     var historyViewModel = HistoryViewModel()
     
@@ -22,7 +22,6 @@ class HistoryController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         setNavigationController()
-        historyLabel.charInterval = 0.03
         setOutlets()
     }
     
@@ -31,13 +30,20 @@ class HistoryController: UIViewController {
         let gsReference = storage.reference(forURL: historyViewModel.getHistoryImage())
         
         gsReference.downloadURL { url, error in
+            LoadingView.hide()
             if error != nil {
                 print(error!)
             } else {
                 self.imageView.kf.setImage(with: url)
             }
         }
-        historyLabel.text = historyViewModel.getHistoryLabel()
+        historyLabel.setTextWithTypeAnimation(typedText: historyViewModel.getHistoryLabel(), characterDelay:  5)
+        
+        outletButton.cornerRadius = 15
+
+        let myColor = UIColor.rouge
+        outletButton.layer.borderWidth = 3.0
+        outletButton.layer.borderColor = myColor.cgColor
     }
     
     @IBAction func nextPressed(_ sender: UIButton) {
@@ -53,12 +59,7 @@ extension HistoryController {
         navigationItem.hidesBackButton = true
         
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
-        if #available(iOS 13.0, *) {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
-        } else {
-            // Fallback on earlier versions
-        }
-    }
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(leaveGame))    }
     
     @objc func leaveGame() {
         SingletonGameManager.shared.overTimer()

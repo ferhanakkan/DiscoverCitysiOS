@@ -7,17 +7,34 @@
 //
 
 import UIKit
-import CLTypingLabel
 
 class ScoreController: UIViewController {
 
-    @IBOutlet weak var scoreScreenLabel: CLTypingLabel!
+    @IBOutlet weak var exitButtonOutlet: UIButton!
+    @IBOutlet weak var retryButtonOutlet: UIButton!
+    
+    @IBOutlet weak var scoreScreenLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationController()
-        scoreScreenLabel.text = SingletonGameManager.shared.calculateScore()
+         scoreScreenLabel.setTextWithTypeAnimation(typedText: SingletonGameManager.shared.calculateScore(), characterDelay:  5)
         SingletonGameManager.shared.overTimer()
+        setButtonOutlet()
+        
+        if (UserDefaults.standard.value(forKey: "nicknamePreferance") as! Bool) {
+            SingletonGameManager.shared.setBestScore(nickname: UserDefaults.standard.value(forKey: "UserNickName") as! String, areaName: SingletonGameManager.shared.selectedArea!, point: SingletonGameManager.shared.calculateScoreInt())
+        }
+    }
+    
+    func setButtonOutlet() {
+        exitButtonOutlet.cornerRadius = 15
+        retryButtonOutlet.cornerRadius = 15
+        let myColor = UIColor.rouge
+        retryButtonOutlet.layer.borderWidth = 3.0
+        retryButtonOutlet.layer.borderColor = myColor.cgColor
+        exitButtonOutlet.layer.borderWidth = 3.0
+        exitButtonOutlet.layer.borderColor = myColor.cgColor
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {

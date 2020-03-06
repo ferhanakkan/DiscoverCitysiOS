@@ -14,15 +14,20 @@ import Kingfisher
 class FirestormManager {
 
     var areaDataArray: [AreaDataModel] = []
+    var bestCoreArray: [BestScoreModel] = []
+    var cityDataArray: [CityModel] = []
+    var areaListArray: [AreaList] = []
     
     func getDataFromFirestore(selectedCity city: String, selectedArea area: String, completion: @escaping([AreaDataModel]) -> Void) {
         let fireStoreDatabase = Firestore.firestore()
         SingletonGameManager.shared.selectedAreaArray?.removeAll()
         areaDataArray.removeAll()
+        print("\(city) , \(area)")
    fireStoreDatabase.collection(city).document(area).collection("Area").addSnapshotListener { (snapshot, error) in
             if error != nil {
                 print(error!)
             } else {
+
                 if snapshot?.isEmpty != true && snapshot != nil {
                     self.areaDataArray.removeAll()
                     for document in snapshot!.documents {
@@ -47,5 +52,94 @@ class FirestormManager {
             }
         }
     }
+    
+    func getCity(completion: @escaping([CityModel]) -> Void) {
+         let fireStoreDatabase = Firestore.firestore()
+        fireStoreDatabase.collection("CityList").addSnapshotListener { (snapshot, error) in
+                 if error != nil {
+                     print(error!)
+                 } else {
+                     if snapshot?.isEmpty != true && snapshot != nil {
+                        self.cityDataArray.removeAll()
+                         for document in snapshot!.documents {
+                            
+                            if let areaName = document.get("city") as? String, let areaLongitude = document.get("longitude") as? Double, let areaLatitude = document.get("latitude") as? Double{
+                                let data = CityModel(city: areaName, latitude: areaLatitude, longitude: areaLongitude)
+                                print(data)
+                                self.cityDataArray.append(data)
+                             }
+                         }
+                         DispatchQueue.main.async {
+                             completion(self.cityDataArray)
+                         }
+                     }
+                 }
+             }
+        }
+
+    
+    func getBestScore(completion: @escaping([BestScoreModel]) -> Void) {
+         let fireStoreDatabase = Firestore.firestore()
+        fireStoreDatabase.collection("BestScore").addSnapshotListener { (snapshot, error) in
+                 if error != nil {
+                     print(error!)
+                 } else {
+                     if snapshot?.isEmpty != true && snapshot != nil {
+                        self.bestCoreArray.removeAll()
+                         for document in snapshot!.documents {
+                            if let areaName = document.get("area") as? String, let nickname = document.get("nickname") as? String, let point = document.get("point") as? Int{
+                                 
+                                let data = BestScoreModel(nickname: nickname, area: areaName, point: point)
+                                self.bestCoreArray.append(data)
+                             }
+                         }
+                         DispatchQueue.main.async {
+                             completion(self.bestCoreArray)
+                         }
+                     }
+                 }
+             }
+        }
+    
+    func setBestScore(nickname:String, areaName: String, point: Int, completion: @escaping(Bool) -> Void) {
+        let fireStoreDatabase = Firestore.firestore()
+        let docData: [String: Any] = [
+            "nickname": nickname ,
+            "area": areaName,
+            "point": point,
+        ]
+        
+        fireStoreDatabase.collection("BestScore").addDocument(data: docData) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+            
+            completion(true)
+        }
+    }
+    
+     func getArea(selectedCity city: String, completion: @escaping([AreaList]) -> Void) {
+         let fireStoreDatabase = Firestore.firestore()
+         SingletonGameManager.shared.selectedAreaArray?.removeAll()
+         areaListArray.removeAll()
+    fireStoreDatabase.collection(city).addSnapshotListener { (snapshot, error) in
+             if error != nil {
+                 print(error!)
+             } else {
+                 if snapshot?.isEmpty != true && snapshot != nil {
+                     for document in snapshot!.documents {
+                        if let areaName = document.get("area") as? String {
+                            self.areaListArray.append(AreaList(area: areaName))
+                        }
+                     }
+                     DispatchQueue.main.async {
+                        completion(self.areaListArray)
+                     }
+                 }
+             }
+         }
+     }
     
 }

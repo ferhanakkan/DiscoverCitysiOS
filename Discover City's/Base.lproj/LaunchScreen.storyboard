@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,21 +14,28 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenWalkingMan" translatesAutoresizingMaskIntoConstraints="NO" id="Gfv-6H-G9R">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-Cb-1wr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenWalkingMan" translatesAutoresizingMaskIntoConstraints="NO" id="sTP-qk-xiT">
+                                <rect key="frame" x="67.5" y="439" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="mgY-EP-43S"/>
-                                    <constraint firstAttribute="width" constant="240" id="wzD-2I-lZr"/>
+                                    <constraint firstAttribute="width" constant="240" id="asp-TU-bfE"/>
+                                    <constraint firstAttribute="height" constant="128" id="wFh-mD-rko"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
-                            <constraint firstItem="Gfv-6H-G9R" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CET-EM-Z4K"/>
-                            <constraint firstItem="Gfv-6H-G9R" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="neI-Zg-p7y"/>
+                            <constraint firstItem="9Hq-Cb-1wr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2lz-TE-Wei"/>
+                            <constraint firstAttribute="bottom" secondItem="9Hq-Cb-1wr" secondAttribute="bottom" id="9gD-9l-3gP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sTP-qk-xiT" secondAttribute="bottom" constant="100" id="Mz5-Go-nwk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Hq-Cb-1wr" secondAttribute="trailing" id="OY8-Yr-ItK"/>
+                            <constraint firstItem="9Hq-Cb-1wr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aZj-tO-HC5"/>
+                            <constraint firstItem="sTP-qk-xiT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zKg-Gb-Mhy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,9 +46,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="862" height="1418"/>
         <image name="launchScreenWalkingMan" width="1227" height="2000"/>
         <namedColor name="Color">
-            <color red="0.73299998044967651" green="0.88200002908706665" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3880000114440918" green="0.4309999942779541" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

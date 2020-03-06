@@ -39,3 +39,7 @@ struct AreaDataModel {
     }
     
 }
+
+struct AreaList {
+    var area: String
+}

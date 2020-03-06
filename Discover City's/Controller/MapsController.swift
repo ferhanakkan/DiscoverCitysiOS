@@ -9,13 +9,12 @@
 import UIKit
 import MapKit
 import CoreLocation
-import CLTypingLabel
 
 class MapsController: UIViewController {
     
     @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var destinationLabel: CLTypingLabel!
-    @IBOutlet weak var estimetedTime: CLTypingLabel!
+    @IBOutlet weak var destinationLabel: UILabel!
+    @IBOutlet weak var estimetedTime: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
@@ -36,18 +35,12 @@ extension MapsController {
     
     func setNavigationBar() {
         navigationItem.hidesBackButton = true
-        destinationLabel.text = mapsViewModel.getdestinationAreaName()
+        destinationLabel.setTextWithTypeAnimation(typedText: mapsViewModel.getdestinationAreaName(), characterDelay:  5)
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
-        if #available(iOS 13.0, *) {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "location"), style: .plain, target: self, action: #selector(findMe))
-        } else {
-            // Fallback on earlier versions
-        }
-        if #available(iOS 13.0, *) {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
-        } else {
-            // Fallback on earlier versions
-        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(findMe))    
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(leaveGame))
+      
     }
     
     @objc func leaveGame() {
@@ -89,8 +82,7 @@ extension MapsController: MKMapViewDelegate {
                 self.mapView.addOverlay((route?.polyline)!, level: MKOverlayLevel.aboveRoads)
                 let rect = route?.polyline.boundingMapRect
                 self.mapView.setRegion(MKCoordinateRegion(rect!), animated: false)
-                self.estimetedTime.text = "\(Int((route?.expectedTravelTime)! / 60)) minute walking distance"
-                print(self.estimetedTime.text)
+                self.estimetedTime.setTextWithTypeAnimation(typedText: "\(Int((route?.expectedTravelTime)! / 60)) minute walking distance", characterDelay:  5)
             }
             
             self.mapView.setRegion(self.mapsViewModel.setRegion(), animated: true)
@@ -114,6 +106,7 @@ extension MapsController: CLLocationManagerDelegate {
         mapsViewModel.setCurrentLongitude(longitude: locations[0].coordinate.longitude)
         if self.mapsViewModel.chechDidArive(owner: self) {
             self.locationManager.stopUpdatingLocation()
+            LoadingView.hide()
         }
         
         if(mapsViewModel.draw()) {

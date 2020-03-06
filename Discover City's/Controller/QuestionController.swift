@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import CLTypingLabel
 
 class QuestionController: UIViewController {
 
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var questionLabel: CLTypingLabel!
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerA: UIButton!
     @IBOutlet weak var answerB: UIButton!
     @IBOutlet weak var answerC: UIButton!
@@ -29,12 +28,29 @@ class QuestionController: UIViewController {
     }
     
     func setOutlets() {
-        questionLabel.text = questionViewModel.getQuestion()
-        descriptionLabel.text = questionViewModel.getDescription()
+        questionLabel.setTextWithTypeAnimation(typedText: questionViewModel.getDescription(), characterDelay:  5)
+        descriptionLabel.setTextWithTypeAnimation(typedText: questionViewModel.getQuestion(), characterDelay:  5)
         answerA.setTitle(questionViewModel.getAnswerA(), for: .normal)
         answerB.setTitle(questionViewModel.getAnswerB(), for: .normal)
         answerC.setTitle(questionViewModel.getAnswerC(), for: .normal)
         answerD.setTitle(questionViewModel.getAnswerD(), for: .normal)
+        
+       
+        answerA.cornerRadius = 15
+        answerB.cornerRadius = 15
+        answerC.cornerRadius = 15
+        answerD.cornerRadius = 15
+
+        let myColor = UIColor.rouge
+        answerA.layer.borderWidth = 3.0
+        answerA.layer.borderColor = myColor.cgColor
+        answerB.layer.borderWidth = 3.0
+        answerB.layer.borderColor = myColor.cgColor
+        answerC.layer.borderWidth = 3.0
+        answerC.layer.borderColor = myColor.cgColor
+        answerD.layer.borderWidth = 3.0
+        answerD.layer.borderColor = myColor.cgColor
+        
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -79,11 +95,8 @@ extension QuestionController {
     func setNavigationController() {
         navigationItem.hidesBackButton = true
         navigationItem.titleView = SingletonGameManager.shared.weatherUIView
-        if #available(iOS 13.0, *) {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leaveGame))
-        } else {
-            // Fallback on earlier versions
-        }
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(leaveGame))
+
     }
     
     @objc func leaveGame() {

@@ -10,21 +10,9 @@ import UIKit
 class AreaViewModel {
     
     var areaData = [AreaDataModel]()
-    var areaArray = [String]()
+    var areaArray = [AreaList]()
     
     
-
-    
-    func setTableviewArea(selection: String) {
-        if selection == "Istanbul" {
-            areaArray = ["Sultan Ahmet","Eminonu"]
-        } else if selection == "Ankara" {
-            areaArray = ["Anitkabir", "Ankara Kalesi"]
-        } else {
-            areaArray = ["error","error"]
-        }
-    }
-
 //MARK: - Timer Setting
     
     func setTimer() {

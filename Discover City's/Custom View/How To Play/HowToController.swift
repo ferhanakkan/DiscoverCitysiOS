@@ -21,6 +21,11 @@ class HowToController: UIViewController , UICollectionViewDelegate, UICollection
         collectionView.cornerRadius = 20
         buttonOutlet.cornerRadius = 15
         
+        let myColor = UIColor.rouge
+        
+        buttonOutlet.layer.borderWidth = 3.0
+        buttonOutlet.layer.borderColor = myColor.cgColor
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "HowToCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "HowToCollectionViewCell")

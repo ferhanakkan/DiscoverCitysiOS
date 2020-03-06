@@ -7,7 +7,7 @@
 //
 
 struct CityModel {
-    
-    var city = [String]()
-    
+    var city: String
+    var latitude: Double
+    var longitude: Double
 }

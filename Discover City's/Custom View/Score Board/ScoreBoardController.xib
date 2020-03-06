@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="Wwd-zf-KeY" customClass="ScoreBoardController" customModule="Discover_City" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="8kp-ph-Sna">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Z6-Vb-rec">
+                        <rect key="frame" x="20" y="44" width="374" height="818"/>
+                        <color key="backgroundColor" name="View Background Color"/>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" name="View Background Color"/>
+                <constraints>
+                    <constraint firstItem="Wsm-Js-QhB" firstAttribute="bottom" secondItem="7Z6-Vb-rec" secondAttribute="bottom" id="1Ja-gM-s04"/>
+                    <constraint firstItem="7Z6-Vb-rec" firstAttribute="leading" secondItem="Wsm-Js-QhB" secondAttribute="leading" constant="20" id="AeG-td-Qpj"/>
+                    <constraint firstItem="Wsm-Js-QhB" firstAttribute="trailing" secondItem="7Z6-Vb-rec" secondAttribute="trailing" constant="20" id="CHx-ur-Nqo"/>
+                    <constraint firstItem="7Z6-Vb-rec" firstAttribute="top" secondItem="Wsm-Js-QhB" secondAttribute="top" id="eg7-Ya-GkB"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="Wsm-Js-QhB"/>
+            </view>
+            <connections>
+                <outlet property="tableView" destination="7Z6-Vb-rec" id="pje-q2-Yc6"/>
+            </connections>
+            <point key="canvasLocation" x="94" y="-58"/>
+        </viewController>
+    </objects>
+    <resources>
+        <namedColor name="View Background Color">
+            <color red="0.59604488218753171" green="0.55015124145569416" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

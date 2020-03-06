@@ -14,9 +14,9 @@
             filePath = "Discover City&apos;s/Controller/QuestionController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "imageSelector()"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "buttonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

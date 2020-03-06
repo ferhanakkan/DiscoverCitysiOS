@@ -29,7 +29,9 @@ class SingletonGameManager {
     var arrayCounter = 0
     
     var weatherUIView: UIView?
-    var time = Timer()   
+    var time = Timer()
+    
+    var userLocation : CLLocation?
 }
 
 //MARK: - Timer Settings
@@ -67,6 +69,10 @@ extension SingletonGameManager {
     
     func calculateScore() -> String {
         return "Your Score \(score-(timeInt*3))"
+    }
+    
+    func calculateScoreInt() -> Int {
+        return score-(timeInt*3)
     }
 }
 
@@ -135,6 +141,13 @@ extension SingletonGameManager {
             selectedAreaArray = data.sorted { $0.point < $1.point }
             selectedAreaModel = selectedAreaArray![arrayCounter]
     }
+    
+    func setBestScore(nickname: String, areaName: String, point: Int) {
+        firestorm.setBestScore(nickname: nickname , areaName: areaName, point: point) { (Bool) in
+            
+        }
+    }
+    
 }
 
 //MARK: - Reachability
@@ -163,5 +176,6 @@ extension SingletonGameManager {
         }
         
     }
+    
     
 }

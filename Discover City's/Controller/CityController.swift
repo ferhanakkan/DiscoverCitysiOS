@@ -8,28 +8,30 @@
 
 import UIKit
 import CoreLocation
-import CLTypingLabel
 
 class CityController: UIViewController {
     
-    @IBOutlet weak var textLabel: CLTypingLabel!
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var cityViewModel = CityViewModel()
-    var locationManager = CLLocationManager()
-    var weatherManager = WeatherManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
-        cityViewModel.setCity()
-        setCLLocationManager()
-        setWeatherManager()
-        textLabel.charInterval = 0.05
-        textLabel.text = K.cityLabel
+        cityViewModel.setCity { (bool) in
+            LoadingView.hide()
+            self.tableView.reloadData()
+        }
+       textLabel.setTextWithTypeAnimation(typedText: K.cityLabel, characterDelay:  5)
+        setNavigationController()
         
         tableView.register(UINib(nibName: "TableSelectionCell", bundle: nil), forCellReuseIdentifier: "TableSelectionCell")
+    }
+    
+    func setNavigationController() {
+        navigationItem.titleView = SingletonGameManager.shared.weatherUIView
     }
 }
 //MARK: - TableViewDelegate
@@ -41,72 +43,52 @@ extension CityController: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  cityViewModel.cityModel.city.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "TableSelectionCell" , for: indexPath) as! TableSelectionCell
-        cell.backgroundColor = .clear
-        cell.nameLabel.text = cityViewModel.cityModel.city[indexPath.row]
-        return  cell
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        SingletonGameManager.shared.setSelectedCity(selectedCity: cityViewModel.cityModel.city[indexPath.row])
+        SingletonGameManager.shared.setSelectedCity(selectedCity: cityViewModel.cityModel[indexPath.section].city)
         tableView.deselectRow(at: indexPath, animated: true)
         if let toArea = Bundle.main.loadNibNamed(K.area, owner: self, options: nil)?.first as? AreaController {
+            LoadingView.show()
             self.navigationController?.show(toArea, sender: nil)
         }
     }
     
-}
 
-//MARK: - CLLocationManagerDelegate
+       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+          return 1
+      }
 
-extension CityController: CLLocationManagerDelegate {
+      
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableSelectionCell" , for: indexPath) as! TableSelectionCell
+        cell.backgroundColor = .clear
+        cell.nameLabel.text = cityViewModel.cityModel[indexPath.section].city
+        cell.cornerRadius = 20
+        
+        let myColor = UIColor.rouge
+        cell.layer.borderWidth = 3.0
+        cell.layer.borderColor = myColor.cgColor
+        
+        return cell
+      }
     
-    func setCLLocationManager(){
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        DispatchQueue.main.async {
-            self.weatherManager.fetchWeather(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-    }
-}
+      func numberOfSections(in tableView: UITableView) -> Int {
+        return cityViewModel.cityModel.count
+       }
 
-//MARK: - WeatherManagerDelegate
-
-extension CityController: WeatherManagerDelegate {
-    
-    func setWeatherManager() {
-        weatherManager.delegate = self
-    }
-    
-    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-        DispatchQueue.main.async {
-            self.navigationItem.titleView = self.cityViewModel.weatherUIViewSetter(weather: weather)
-            self.locationManager.stopUpdatingLocation()
-            self.setNavigationController()
-        }
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
-    func setNavigationController() {
-        navigationItem.titleView = SingletonGameManager.shared.weatherUIView
-    }
-    
+       // Set the spacing between sections
+       func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+           return 7
+       }
+      
+      // Make the background color show through
+      func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+          let headerView = UIView()
+          headerView.backgroundColor = UIColor.clear
+          return headerView
+      }
     
 }
+        
+
+
