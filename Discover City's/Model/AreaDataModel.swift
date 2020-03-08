@@ -42,4 +42,6 @@ struct AreaDataModel {
 
 struct AreaList {
     var area: String
+    var areaLatitude: Double
+    var areaLongitude: Double
 }

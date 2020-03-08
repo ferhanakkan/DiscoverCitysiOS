@@ -130,8 +130,12 @@ class FirestormManager {
              } else {
                  if snapshot?.isEmpty != true && snapshot != nil {
                      for document in snapshot!.documents {
-                        if let areaName = document.get("area") as? String {
-                            self.areaListArray.append(AreaList(area: areaName))
+//                        print(document.get("area") as? String)
+//                        print(document.get("longitude") as? Double)
+//                        print(document.get("latitude") as? Double)
+                        
+                        if let areaName = document.get("area") as? String , let areaLongitude = document.get("longitude") as? Double, let areaLatitude = document.get("latitude") as? Double{
+                            self.areaListArray.append(AreaList(area: areaName, areaLatitude: areaLatitude, areaLongitude: areaLongitude))
                         }
                      }
                      DispatchQueue.main.async {

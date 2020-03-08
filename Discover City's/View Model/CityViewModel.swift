@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class CityViewModel {
     
@@ -20,6 +21,13 @@ class CityViewModel {
             print(data)
             completion(true)
         })
+    }
+    
+    func getDistance(indexpath: Int) -> String {
+        let destination = CLLocation(latitude: cityModel[indexpath].latitude,longitude: cityModel[indexpath].longitude)
+        let distance = SingletonGameManager.shared.userLocation!.distance(from: destination)/1000
+        print("\(destination) , \(String(describing: SingletonGameManager.shared.userLocation)) ferhan destination \(distance)")
+        return "(\(String(format:"%.2f", distance)) KM)"
     }
     
 }

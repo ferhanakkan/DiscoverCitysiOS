@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36W-sl-19r">
-                        <rect key="frame" x="20" y="13" width="324" height="18"/>
+                        <rect key="frame" x="20" y="13" width="39.5" height="18"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -30,17 +30,26 @@
                             <constraint firstAttribute="width" constant="30" id="noP-xZ-kof"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zR-nq-vlk">
+                        <rect key="frame" x="79.5" y="15" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" name="Button Color"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="00D-iU-lhy" secondAttribute="trailing" constant="20" id="1QL-9f-f9G"/>
-                    <constraint firstItem="00D-iU-lhy" firstAttribute="leading" secondItem="36W-sl-19r" secondAttribute="trailing" constant="20" id="5Zh-Cl-beg"/>
+                    <constraint firstItem="9zR-nq-vlk" firstAttribute="leading" secondItem="36W-sl-19r" secondAttribute="trailing" constant="20" id="1xe-9j-TeC"/>
+                    <constraint firstItem="9zR-nq-vlk" firstAttribute="centerY" secondItem="ilu-YZ-kqr" secondAttribute="centerY" id="HZV-Aq-zce"/>
                     <constraint firstItem="00D-iU-lhy" firstAttribute="centerY" secondItem="ilu-YZ-kqr" secondAttribute="centerY" id="m1c-Ls-QPx"/>
                     <constraint firstItem="36W-sl-19r" firstAttribute="centerY" secondItem="ilu-YZ-kqr" secondAttribute="centerY" id="n4F-k0-oja"/>
                     <constraint firstItem="36W-sl-19r" firstAttribute="leading" secondItem="ilu-YZ-kqr" secondAttribute="leading" constant="20" id="oGK-Nd-16h"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="Button Color"/>
             <connections>
+                <outlet property="distanceLabel" destination="9zR-nq-vlk" id="KPP-XJ-W5Q"/>
                 <outlet property="nameLabel" destination="36W-sl-19r" id="Tx6-Vy-Agc"/>
             </connections>
             <point key="canvasLocation" x="115.94202898550725" y="14.732142857142856"/>
@@ -49,7 +58,7 @@
     <resources>
         <image name="arrow" width="24" height="24"/>
         <namedColor name="Button Color">
-            <color red="0.90515942258883253" green="0.90515942258883253" blue="0.90515942258883253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.90499997138977051" green="0.90499997138977051" blue="0.90499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

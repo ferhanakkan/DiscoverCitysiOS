@@ -65,7 +65,7 @@
     <resources>
         <image name="citySunny" width="800" height="370"/>
         <namedColor name="View Background Color">
-            <color red="0.59604488218753171" green="0.55015124145569416" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.43500000238418579" green="0.35600000619888306" blue="0.84299999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

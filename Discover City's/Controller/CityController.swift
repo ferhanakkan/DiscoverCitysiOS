@@ -63,6 +63,7 @@ extension CityController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableSelectionCell" , for: indexPath) as! TableSelectionCell
         cell.backgroundColor = .clear
         cell.nameLabel.text = cityViewModel.cityModel[indexPath.section].city
+        cell.distanceLabel.text = cityViewModel.getDistance(indexpath: indexPath.section)
         cell.cornerRadius = 20
         
         let myColor = UIColor.rouge

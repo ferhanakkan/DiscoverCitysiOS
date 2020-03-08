@@ -53,6 +53,7 @@ extension AreaController: UITableViewDelegate, UITableViewDataSource {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableSelectionCell" , for: indexPath) as! TableSelectionCell
         cell.backgroundColor = .clear
         cell.nameLabel.text = areaViewModel.areaArray[indexPath.section].area
+        cell.distanceLabel.text = areaViewModel.getDistance(indexpath: indexPath.section)
         cell.cornerRadius = 20
         let myColor = UIColor.rouge
         cell.layer.borderWidth = 3.0

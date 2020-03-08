@@ -6,6 +6,7 @@
 //  Copyright © 2020 Ferhan Akkan. All rights reserved.
 //
 import UIKit
+import CoreLocation
 
 class AreaViewModel {
     
@@ -30,9 +31,16 @@ class AreaViewModel {
                 }
                 SingletonGameManager.shared.repeatControlerForScreenPass = false
             } else {
+                LoadingView.hide()
                 (owner as AnyObject).present(SingletonGameManager.shared.makeAlert(title: "Please Check Your Internet Connection", message: ""), animated: true, completion: nil)
             }
         }
+    }
+    
+    func getDistance(indexpath: Int) -> String {
+        let destination = CLLocation(latitude: areaArray[indexpath].areaLatitude,longitude: areaArray[indexpath].areaLongitude)
+        let distance = SingletonGameManager.shared.userLocation!.distance(from: destination)/1000
+        return "(\(String(format:"%.2f", distance)) KM)"
     }
 }
  

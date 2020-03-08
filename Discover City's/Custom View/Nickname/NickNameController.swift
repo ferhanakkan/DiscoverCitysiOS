@@ -53,15 +53,19 @@ class NickNameController: UIViewController {
     }
     
     @IBAction func continueButton(_ sender: UIButton) {
-        if outletSwitch.isOn {
-            UserDefaults.standard.setValue(true, forKey: "nicknamePreferance")
-            UserDefaults.standard.setValue(nicknameTextfield.text, forKey: "UserNickName")
+        if outletSwitch.isOn && nicknameTextfield.text == "" {
+           let alert = SingletonGameManager.shared.makeAlert(title: "Ups!!", message: "Please enter nickname or turn off switch.")
+            UIApplication.getPresentedViewController()!.present(alert, animated: true)
         } else {
-            UserDefaults.standard.setValue(false, forKey: "nicknamePreferance")
+            if outletSwitch.isOn {
+                UserDefaults.standard.setValue(true, forKey: "nicknamePreferance")
+                UserDefaults.standard.setValue(nicknameTextfield.text, forKey: "UserNickName")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "nicknamePreferance")
+            }
+            
+            dismiss(animated: true, completion: nil)
         }
-        
-        dismiss(animated: true, completion: nil)
-        
     }
 
 }
