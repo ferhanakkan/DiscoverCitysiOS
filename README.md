@@ -12,3 +12,6 @@ Kingfisher
 
 
 
+<img src ="/Discover City's/ScreenShots/1.png" width = "100" height = "200">
+<img src ="/Discover City's/ScreenShots/2.png" width = "100" height = "200">
+<img src ="/Discover City's/ScreenShots/3.png" width = "100" height = "200">
