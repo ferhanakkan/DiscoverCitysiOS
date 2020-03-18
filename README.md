@@ -8,11 +8,11 @@ Discover City is a free city game for tourists. We show touristic places in your
 
 # Libraries and tools 🛠
 
--FireStorm 
--Firebase Database
--Crashlytics 
--Kingfisher
--MVVM
+-FireStorm\
+-Firebase Database\
+-Crashlytics\
+-Kingfisher\
+-MVVM\
 -CoreLocation
 
 
