@@ -5,9 +5,9 @@ Discover City is a free city game for tourists. We show touristic places in your
 
 # Libraries and tools 🛠
 
--Firebase
--Crashlytics 
--Kingfisher
+Firebase 
+Crashlytics 
+Kingfisher
 
 
 
