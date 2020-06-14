@@ -172,7 +172,6 @@ extension SingletonGameManager {
                 exit(0)
             }))
             UIApplication.getPresentedViewController()!.present(alert, animated: true, completion: nil)
-            
         }
         
     }

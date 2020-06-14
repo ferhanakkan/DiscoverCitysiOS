@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HowToController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class HowToController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
 
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!

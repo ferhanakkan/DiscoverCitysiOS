@@ -7,7 +7,6 @@
 //
 
 struct BestScoreModel {
-    
     let nickname: String
     let area: String
     let point: Int

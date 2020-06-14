@@ -46,6 +46,7 @@ struct QuestionViewModel {
         return picker
     }
     
+    
 //MARK: - Screen Pass
     
     mutating func screenPass(owner: Any) {
